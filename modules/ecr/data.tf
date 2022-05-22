@@ -9,12 +9,12 @@
 #   value = data.aws_secrutiy_groups.container_sgp.id
 # }
 
-data "aws_vpc" "vpc" {
-    filter {
-      name = "tag:Name"
-      values = ["${var.service}*"]
-  }
-}
+# data "aws_vpc" "vpc" {
+#     filter {
+#       name = "tag:Name"
+#       values = ["${var.service}*"]
+#   }
+# }
 
 data "aws_iam_policy" "codedeploy_ecs_policy" {
     name = "AWSCodeDeployRoleForECS"
